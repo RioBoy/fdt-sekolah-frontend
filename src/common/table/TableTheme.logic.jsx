@@ -10,7 +10,8 @@ const TrTextLoad = ({
     <td colSpan={colSpan} className="py-6">
       <h4
         className={
-          'text-xl font-normal text-center text-slate-300 mb-0 ' + extraClass
+          'flex items-center justify-center gap-x-3 text-xl font-normal text-slate-300 mb-0 ' +
+          extraClass
         }
       >
         {text}{' '}

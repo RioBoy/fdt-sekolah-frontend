@@ -19,20 +19,20 @@ export const _shapeMethodPost = (
   tokenCancel = '',
   isFormData = false,
 ) => {
-  const others = tokenCancel ? {} : {};
-  others['validateStatus'] = (status) => {
-    return true; // I'm always returning true, you may want to do it depending on the status received
-  };
-
   const newConfigHeads = {};
   if (isFormData) {
     newConfigHeads['Content-Type'] = 'multipart/form-data';
   }
 
   return api
-    .post(url, payload, others, {
-      ...newConfigHeads,
-    })
+    .post(
+      url,
+      payload,
+      {},
+      {
+        ...newConfigHeads,
+      },
+    )
     .then((res) => {
       return res.data;
     })
@@ -49,20 +49,20 @@ export const _shapeMethodPut = (
   tokenCancel = '',
   isFormData = false,
 ) => {
-  const others = tokenCancel ? {} : {};
-  others.validateStatus = (status) => {
-    return true; // I'm always returning true, you may want to do it depending on the status received
-  };
-
   const newConfigHeads = {};
   if (isFormData) {
     newConfigHeads['Content-Type'] = 'multipart/form-data';
   }
 
   return api
-    .put(url, payload, others, {
-      ...newConfigHeads,
-    })
+    .put(
+      url,
+      payload,
+      {},
+      {
+        ...newConfigHeads,
+      },
+    )
     .then((res) => {
       return res.data;
     })

@@ -29,9 +29,9 @@ export const objectPathEndPointAPI = (menu = '', addFeatures = []) => {
 
   return {
     main: menu,
-    detail: (menuId) => _configWithId(menuId, '/detail'),
-    update: (menuId) => _configWithId(menuId, '/update'),
-    delete: (menuId) => _configWithId(menuId, '/delete'),
+    detail: (menuId) => _configWithId(menuId, ''),
+    update: (menuId) => _configWithId(menuId, ''),
+    delete: (menuId) => _configWithId(menuId, ''),
     ...features,
   };
 };
