@@ -1,5 +1,16 @@
 import * as _ from 'lodash';
 
+export const objectPathMenu = (name = '', detail = '/:id', edit = '/') => {
+  const main = '/' + name;
+
+  return {
+    main,
+    add: main + '/add',
+    detail: (id = ':id') => main + '/' + id + '/detail',
+    edit: (id = ':id') => main + '/' + id + '/edit',
+  };
+};
+
 export const objectPathEndPointAPI = (menu = '', addFeatures = []) => {
   const _configWithId = (menuId, name) => menu + '/' + menuId + name;
 
