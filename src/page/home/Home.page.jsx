@@ -109,14 +109,14 @@ class HomePage extends Component {
                               tabIndex={0}
                               className="dropdown-content z-[1] menu py-2 px-4 bg-white rounded-lg shadow-md w-32"
                             >
-                              {/* <li className="block">
+                              <li className="block">
                                 <Link
                                   to={siswaPath.detail(vm.uuid)}
                                   className="py-3"
                                 >
                                   Detail
                                 </Link>
-                              </li> */}
+                              </li>
                               <li className="block">
                                 <Link
                                   to={siswaPath.edit(vm.uuid)}
